@@ -1,0 +1,37 @@
+#method 1 undo method using dictionary
+#
+nums=[1,2,3,2]
+frequency={}
+sum=0
+
+for number in nums:
+  #first time seening the number  and simply add0
+  if number not in frequency:
+    frequency[number]=1
+    sum +=number
+  #second time seening the number so subtract the number which is added earlier (undo)
+  elif frequency[number]==1:
+    frequency[number]=2
+    sum -=number
+ #else more than two times are ignored    
+print (sum)  
+
+#method 2 first count all frequency and then count only those element which has frequency value 1 using dictionary 
+nums=[1,2,3,2]
+frequency={}
+sum=0
+
+for number in nums:
+  #counting frequency
+  if number  in frequency: #element already present in the dictonary
+    frequency[number]+=1
+     
+  else : #new element 
+    frequency [number]=1
+
+#adding those elemant which has frequency 1
+for number in frequency :
+  if frequency [number]==1:
+    sum += number 
+
+print (sum)
