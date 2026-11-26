@@ -5,7 +5,7 @@ frequency={}
 sum=0
 
 for number in nums:
-  #first time seening the number  and simply add0
+  #first time seening the number  and simply add
   if number not in frequency:
     frequency[number]=1
     sum +=number
